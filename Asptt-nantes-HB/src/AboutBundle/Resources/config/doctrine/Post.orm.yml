@@ -1,0 +1,24 @@
+AboutBundle\Entity\Post:
+    type: entity
+    table: null
+    repositoryClass: AboutBundle\Repository\PostRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userName:
+            type: string
+            length: 255
+        userEmail:
+            type: string
+            length: 255
+            unique: true
+        date:
+            type: datetimetz
+        content:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+AboutBundle\Entity\VariousContent:
+    type: entity
+    table: null
+    repositoryClass: AboutBundle\Repository\VariousContentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        historicContent:
+            type: string
+            length: 255
+        valuesContent:
+            type: string
+            length: 255
+        trainingSchedules:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

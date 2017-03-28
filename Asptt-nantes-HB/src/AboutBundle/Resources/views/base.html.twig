@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    {% block stylesheets %}
+        <link href="{{ asset('bundles/app/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/app/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/app/css/screen.css') }}" rel="stylesheet" />
+
+    {% endblock stylesheets %}
+
+    <title>ASPTT Nantes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<h1> ASPTT Nantes Handball</h1>
+<img src= "{{ asset('bundles/app/img/logo.jpg') }}" id="logo" />
+<div id="navbar">
+    {% block navbar %} {% include 'AboutBundle::navbar.html.twig' %} {% endblock %}
+</div>
+<div id="content">
+    {% block content %}
+
+    {% endblock %}
+</div>
+{% block footer %} <p>Site ASPTT Handball Nantes - created by Claire, Marlène, Silvano, Benjamin et Gabriel</p>{% endblock %}
+</body>
+
+</html>
