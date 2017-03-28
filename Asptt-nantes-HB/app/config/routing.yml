@@ -1,9 +1,9 @@
-team:
-    resource: "@TeamBundle/Resources/config/routing.yml"
-    prefix:   /
-
 about:
     resource: "@AboutBundle/Resources/config/routing.yml"
+    prefix:   /
+
+team:
+    resource: "@TeamBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:

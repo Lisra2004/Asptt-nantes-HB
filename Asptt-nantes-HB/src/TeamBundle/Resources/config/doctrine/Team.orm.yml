@@ -1,0 +1,16 @@
+TeamBundle\Entity\Team:
+    type: entity
+    table: null
+    repositoryClass: TeamBundle\Repository\TeamRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        teamName:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }
