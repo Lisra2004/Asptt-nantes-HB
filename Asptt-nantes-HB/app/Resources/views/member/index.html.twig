@@ -1,0 +1,53 @@
+{% extends 'AboutBundle::base.html.twig' %}
+
+{% block content %}
+    <h1>Members list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Birthdate</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Licencenumber</th>
+                <th>Sex</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for member in members %}
+            <tr>
+                <td><a href="{{ path('member_show', { 'id': member.id }) }}">{{ member.id }}</a></td>
+                <td>{{ member.lastName }}</td>
+                <td>{{ member.firstName }}</td>
+                <td>{% if member.birthdate %}{{ member.birthdate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ member.address }}</td>
+                <td>{{ member.phone }}</td>
+                <td>{{ member.email }}</td>
+                <td>{{ member.licenceNumber }}</td>
+                <td>{{ member.sex }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('member_show', { 'id': member.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('member_edit', { 'id': member.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('member_new') }}">Create a new member</a>
+        </li>
+    </ul>
+{% endblock %}
