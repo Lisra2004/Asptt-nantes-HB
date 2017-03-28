@@ -1,3 +1,7 @@
+team_team:
+    resource: "@TeamBundle/Resources/config/routing/team.yml"
+    prefix:   /team
+
 team_homepage:
     path:     /
     defaults: { _controller: TeamBundle:Default:index }
