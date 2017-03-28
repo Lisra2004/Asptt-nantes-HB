@@ -1,0 +1,38 @@
+TeamBundle\Entity\Member:
+    type: entity
+    table: null
+    repositoryClass: TeamBundle\Repository\MemberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        lastName:
+            type: string
+            length: 255
+        firstName:
+            type: string
+            length: 255
+        birthdate:
+            type: datetime
+        address:
+            type: string
+            length: 255
+        phone:
+            type: string
+            length: '15'
+            nullable: true
+        email:
+            type: string
+            length: 255
+            nullable: true
+        licenceNumber:
+            type: string
+            length: 255
+            unique: true
+        sex:
+            type: string
+            length: '10'
+    lifecycleCallbacks: {  }
